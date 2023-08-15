@@ -1,6 +1,8 @@
 package hexlet.code;
 
 public class Engine {
+    private static final int POST_ROUND_DATA_INDX = 3;
+
     public static void start(String gameRule, String[][] gameData) {
         System.out.println("Welcome to the Brain Games!");
         System.out.print("May I have your name? ");
@@ -29,7 +31,7 @@ public class Engine {
             i++;
         }
 
-        if (i == 3) {
+        if (i == POST_ROUND_DATA_INDX) {
             System.out.println("Congratulations, " + username + "!");
         }
     }

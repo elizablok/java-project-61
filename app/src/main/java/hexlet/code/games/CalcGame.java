@@ -8,11 +8,11 @@ public class CalcGame implements Game {
     private static final String GAME_RULE = "What is the result of the expression?";
     private static final int MIN_OPRTR_INDX = 0;
     private static final int MAX_OPRTR_INDX = 2;
-    private static final String[] operators = new String[]{"+", "-", "*"};
+    private static final String[] OPERATORS = new String[]{"+", "-", "*"};
 
     private static String generateOperator() {
         int i = Utils.generateNum(MIN_OPRTR_INDX, MAX_OPRTR_INDX);
-        return operators[i];
+        return OPERATORS[i];
     }
     private static int execute(int num1, int num2, String operator) {
         switch (operator) {

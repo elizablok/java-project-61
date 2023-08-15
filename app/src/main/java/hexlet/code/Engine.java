@@ -17,13 +17,13 @@ public class Engine {
             System.out.println(gameRule);
             System.out.println("Question: " + question);
 
+            System.out.print("Your answer: " );
             var answer = Utils.getInput();
-            System.out.println("Your answer: " + answer);
 
             if (correctAnswer.equalsIgnoreCase(answer)) {
                 System.out.println("Correct!");
             } else {
-                System.out.println("'yes' is wrong answer ;(. Correct answer was 'no'.");
+                System.out.println("'" + answer + "'" + " is wrong answer ;(. Correct answer was " + "'" + correctAnswer + "'.");
                 System.out.println("Let's try again, " + username + "!");
                 break;
             }

@@ -3,6 +3,8 @@ package hexlet.code;
 import java.util.Scanner;
 
 public class Utils {
+    public static final int ROUNDS_NUM = 3;
+    public static final int ROUND_DATA_NUM = 2;
     public static final int MIN_NUM = 1;
     public static final int MAX_NUM = 100;
 
@@ -12,6 +14,6 @@ public class Utils {
     }
     public static int generateNum(int min, int max) {
         int range = (max - min) + 1;
-        return (int)(Math.random() * range) + min;
+        return (int) (Math.random() * range) + min;
     }
 }

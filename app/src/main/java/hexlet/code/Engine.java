@@ -1,7 +1,5 @@
 package hexlet.code;
 
-import java.util.Scanner;
-
 public class Engine {
     public static void start(String gameRule, String[][] gameData) {
         System.out.println("Welcome to the Brain Games!");
@@ -17,13 +15,14 @@ public class Engine {
             var correctAnswer = gameData[i][1];
             System.out.println("Question: " + question);
 
-            System.out.print("Your answer: " );
+            System.out.print("Your answer: ");
             var answer = Utils.getInput();
 
             if (correctAnswer.equalsIgnoreCase(answer)) {
                 System.out.println("Correct!");
             } else {
-                System.out.println("'" + answer + "'" + " is wrong answer ;(. Correct answer was " + "'" + correctAnswer + "'.");
+                System.out.println("'" + answer + "'" + " is wrong answer ;(. Correct answer was "
+                + "'" + correctAnswer + "'.");
                 System.out.println("Let's try again, " + username + "!");
                 break;
             }

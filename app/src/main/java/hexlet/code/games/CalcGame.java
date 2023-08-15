@@ -6,11 +6,11 @@ import hexlet.code.Utils;
 
 public class CalcGame implements Game {
     private static final String GAME_RULE = "What is the result of the expression?";
-    public static final int MIN_OPRTR_INDX = 0;
-    public static final int MAX_OPRTR_INDX = 2;
-    public static String[] operators = new String[]{"+", "-", "*"};
+    private static final int MIN_OPRTR_INDX = 0;
+    private static final int MAX_OPRTR_INDX = 2;
+    private static final String[] operators = new String[]{"+", "-", "*"};
 
-    public static String generateOperator() {
+    private static String generateOperator() {
         int i = Utils.generateNum(MIN_OPRTR_INDX, MAX_OPRTR_INDX);
         return operators[i];
     }
@@ -25,7 +25,7 @@ public class CalcGame implements Game {
         }
     }
     public static String[][] build() {
-        var res = new String[3][2];
+        var res = new String[Utils.ROUNDS_NUM][Utils.ROUND_DATA_NUM];
         for (var i = 0; i < res.length; i++) {
             int randomNum1 = Utils.generateNum(Utils.MIN_NUM, Utils.MAX_NUM);
             int randomNum2 = Utils.generateNum(Utils.MIN_NUM, Utils.MAX_NUM);

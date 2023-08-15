@@ -16,7 +16,7 @@ public class PrimeGame implements Game {
         return true;
     }
     private static String[][] build() {
-        var res = new String[3][2];
+        var res = new String[Utils.ROUNDS_NUM][Utils.ROUND_DATA_NUM];
         for (var i = 0; i < res.length; i++) {
             int randomNum = Utils.generateNum(Utils.MIN_NUM, Utils.MAX_NUM);
             String answer = execute(randomNum) ? "yes" : "no";

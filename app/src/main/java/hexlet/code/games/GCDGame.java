@@ -6,13 +6,13 @@ import hexlet.code.Utils;
 
 public class GCDGame implements Game {
     private static final String GAME_RULE = "Find the greatest common divisor of given numbers.";
+
     private static int execute(int num1, int num2) {
         if (num1 % num2 != 0) {
             return execute(num2, num1 % num2);
         }
         return num2;
     }
-
     private static String[][] build() {
         var res = new String[3][2];
         for (var i = 0; i < res.length; i++) {
@@ -26,7 +26,6 @@ public class GCDGame implements Game {
         }
         return res;
     }
-
     public static void play() {
         var data = build();
         Engine.start(GAME_RULE, data);

@@ -6,10 +6,10 @@ import hexlet.code.Utils;
 
 public class EvenGame implements Game {
     private static final String GAME_RULE = "Answer 'yes' if the number is even, otherwise answer 'no'.";
+
     private static boolean execute(int num) {
         return num % 2 == 0;
     }
-
     private static String[][] build() {
         var res = new String[3][2];
         for (var i = 0; i < res.length; i++) {
@@ -20,7 +20,6 @@ public class EvenGame implements Game {
         }
         return res;
     }
-
     public static void play() {
         var data = build();
         Engine.start(GAME_RULE, data);

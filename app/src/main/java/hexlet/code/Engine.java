@@ -8,13 +8,13 @@ public class Engine {
         System.out.print("May I have your name? ");
         var username = Utils.getInput();
         System.out.println("Hello, " + username + "!");
+        System.out.println(gameRule);
 
         int i = 0;
 
         while (i < gameData.length) {
             var question = gameData[i][0];
             var correctAnswer = gameData[i][1];
-            System.out.println(gameRule);
             System.out.println("Question: " + question);
 
             System.out.print("Your answer: " );

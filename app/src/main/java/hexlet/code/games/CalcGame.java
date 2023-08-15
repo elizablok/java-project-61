@@ -1,9 +1,10 @@
 package hexlet.code.games;
 
 import hexlet.code.Engine;
+import hexlet.code.Game;
 import hexlet.code.Utils;
 
-public class CalcGame {
+public class CalcGame implements Game {
     private static final String GAME_RULE = "What is the result of the expression?";
     private static int execute(int num1, int num2, String operator) {
         switch (operator) {

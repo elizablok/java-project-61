@@ -2,6 +2,7 @@ package hexlet.code;
 
 import hexlet.code.games.EvenGame;
 import hexlet.code.games.CalcGame;
+import hexlet.code.games.GCDGame;
 
 public class App {
     public static void main(String[] args) {
@@ -9,20 +10,24 @@ public class App {
         System.out.println("1 - Greet");
         System.out.println("2 - Even");
         System.out.println("3 - Calc");
+        System.out.println("4 - GCD");
         System.out.println("0 - Exit");
 
         System.out.print("Your choice: ");
         var gameChoice = Utils.getInput();
 
         switch (gameChoice) {
-            case "3":
-                CalcGame.play();
+            case "1":
+                Cli.greet();
                 break;
             case "2":
                 EvenGame.play();
                 break;
-            case "1":
-                Cli.greet();
+            case "3":
+                CalcGame.play();
+                break;
+            case "4":
+                GCDGame.play();
                 break;
             default:
                 break;
